@@ -37,6 +37,16 @@
     justify-content: center;
     display: none;
 }
+.user__icon2 {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: red;
+    opacity: 0.6;
+}
 
 .hero__section_container {
     display: flex;
@@ -93,18 +103,20 @@
 }
 .we__offer_card {
     border-radius: 10px;
+    width: 360px;
     /* background-color: aqua; */
     overflow: hidden;
     border: 1px solid gray;
+    /* Animations not working */
     transition: all 0.4s ease;
 }
 .we__offer_card:hover {
-    transform: scale(1.15);
+    transform: scale(1.12);
     cursor: pointer;
 }
 .we__offer_card img {
-    width: 250px;
-    height: 170px;
+    width: 360px;
+    height: 160px;
     object-fit: cover;
     object-position: center;
 }
@@ -118,7 +130,99 @@
 .we__offer_content p {
     font-size: 12px;
 }
-
+/* Collections :- */
+.collections h1 {
+    font-weight: 500;
+    margin-left: 12%;
+    padding-top: 50px;
+    font-size: 33px;
+}
+.sub_heading_container span:first-child {
+    margin-left: 145px;
+    font-weight: 300;
+}
+.collections .sub_heading_container {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.sub_sub_heading_container {
+    color: #ff7e8b;
+    cursor: pointer;
+    font-size: 18px;
+    padding-right: 150px;
+}
+.collections_card_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+.collections_card_container .card {
+    width: 270px;
+    height: 300px;
+    min-height: 240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid gray;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 8px;
+}
+.collections_card_container .card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.card1 {
+    background-image: url(./images/collection1.jpg);
+}
+.card2 {
+    background-image: url(./images/collection2.jpg);
+}
+.card3 {
+    background-image: url(./images/collection3.jpg);
+}
+.card4 {
+    background-image: url(./images/collection4.jpg);
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.05) 85%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+.collections_card_container .card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    justify-content: center;
+}
+.content h4 {
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    font-size: 18px;
+}
 
 
 
@@ -143,6 +247,9 @@
         background-color: transparent;
         width: 100%;
         align-items: center;
+    }
+    .hero__section_input_container .user__icon2 {
+        display: none;
     }
     .input_container_location, .input_container_search {
         padding: 15px;
